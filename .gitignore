@@ -1,0 +1,13 @@
+*.log
+*.pyc
+.vscode
+.venv
+*.coverage
+.pytest_cache
+.virtualenv
+__pycache__
+*.egg-info
+.pypirc
+instance
+.coverage
+cache/*

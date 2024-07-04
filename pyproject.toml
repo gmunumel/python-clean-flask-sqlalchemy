@@ -1,0 +1,46 @@
+[project]
+name = "python-clean-flask-sqlalchemy"
+version = "1.0.0"
+description = "Boilerplate project using Clean Arquitecture with framework Flask and SQLAlchemy"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Gabriel Munumel", email = "gabrielmunumel@gmail.com" },
+]
+dependencies = [
+  "toml"
+]
+
+[project.urls]
+Homepage = ""
+
+[tool.coverage.run]
+data_file = ".coverage/coverage-data"
+source = [
+  "app/main"
+]
+branch = true
+
+[tool.coverage.xml]
+output = ".coverage/coverage.xml"
+
+[tool.coverage.html]
+directory = ".coverage/coverage-html"
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if is_testing:",
+    "if self._is_testing:",
+    "if __name__ == .__main__.:",
+    "if not is_testing:"
+]
+
+[tool.pytest.ini_options]
+testpaths = [
+  "app/test"
+]
+pythonpath = [
+  ".",
+  "app"
+]
